@@ -6,11 +6,9 @@ class DetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Recibir argumentos de otra pantalla
     final Ailment data = ModalRoute.of(context)?.settings.arguments as Ailment;
     return Scaffold(
       body: CustomScrollView(
-        //Widget con comportamientos predefinidos al scroll
         slivers: [
           const _CustomAppBar(),
           SliverList(
@@ -28,7 +26,7 @@ class DetailsScreen extends StatelessWidget {
 }
 
 class _CustomAppBar extends StatelessWidget {
-  const _CustomAppBar({super.key});
+  const _CustomAppBar();
 
   @override
   Widget build(BuildContext context) {
@@ -38,10 +36,8 @@ class _CustomAppBar extends StatelessWidget {
       expandedHeight: 200,
       floating: false,
       pinned: true,
-      //wIDGET PARA QUE SE AGUSTE AL TAMAÑO
       flexibleSpace: FlexibleSpaceBar(
         centerTitle: true,
-        //Eliminar padding
         titlePadding: const EdgeInsets.all(0),
         title: Container(
           width: double.infinity,
@@ -54,7 +50,7 @@ class _CustomAppBar extends StatelessWidget {
         ),
         background: FadeInImage(
           placeholder: const AssetImage('assets/loading.gif'),
-          image: NetworkImage('${data.id.toString()}.jpg'),
+          image: NetworkImage('assets/${data.id.toString()}.jpg'),
         ),
       ),
     );
@@ -63,7 +59,7 @@ class _CustomAppBar extends StatelessWidget {
 
 class _PosterAndTitle extends StatelessWidget {
   final Ailment data;
-  const _PosterAndTitle({super.key, required this.data});
+  const _PosterAndTitle({required this.data});
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +72,7 @@ class _PosterAndTitle extends StatelessWidget {
             borderRadius: BorderRadius.circular(20),
             child: FadeInImage(
               placeholder: const AssetImage('assets/no-image.jpg'),
-              image: NetworkImage(('${data.id.toString()}.jpg')),
+              image: NetworkImage(('assets/${data.id.toString()}.jpg')),
               height: 250,
             ),
           ),
@@ -124,7 +120,7 @@ class _PosterAndTitle extends StatelessWidget {
 }
 
 class _Overview extends StatelessWidget {
-  const _Overview({super.key});
+  const _Overview();
 
   @override
   Widget build(BuildContext context) {

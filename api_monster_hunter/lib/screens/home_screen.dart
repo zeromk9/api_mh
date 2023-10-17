@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //Colocamos la instancia de MoviesProvider
+
     final mhProvider = Provider.of<MhProvider>(context);
     return Scaffold(
       appBar: AppBar(

@@ -156,34 +156,34 @@ class Recovery {
       };
 }
 
-enum Action { DODGE }
+enum Action { dODGE }
 
-final actionValues = EnumValues({"dodge": Action.DODGE});
+final actionValues = EnumValues({"dodge": Action.dODGE});
 
 enum Element {
-  BLAST,
-  DRAGON,
-  FIRE,
-  ICE,
-  PARALYSIS,
-  POISON,
-  SLEEP,
-  STUN,
-  THUNDER,
-  WATER
+  bLAST,
+  dRAGON,
+  fIRE,
+  iCE,
+  pARALYSIS,
+  pOISON,
+  sLEEP,
+  sTUN,
+  tHUNDER,
+  wATER
 }
 
 final elementValues = EnumValues({
-  "blast": Element.BLAST,
-  "dragon": Element.DRAGON,
-  "fire": Element.FIRE,
-  "ice": Element.ICE,
-  "paralysis": Element.PARALYSIS,
-  "poison": Element.POISON,
-  "sleep": Element.SLEEP,
-  "stun": Element.STUN,
-  "thunder": Element.THUNDER,
-  "water": Element.WATER
+  "blast": Element.bLAST,
+  "dragon": Element.dRAGON,
+  "fire": Element.fIRE,
+  "ice": Element.iCE,
+  "paralysis": Element.pARALYSIS,
+  "poison": Element.pOISON,
+  "sleep": Element.sLEEP,
+  "stun": Element.sTUN,
+  "thunder": Element.tHUNDER,
+  "water": Element.wATER
 });
 
 class Location {
@@ -306,37 +306,37 @@ class Condition {
       };
 }
 
-enum Rank { HIGH, LOW }
+enum Rank { hIGH, lOW }
 
-final rankValues = EnumValues({"high": Rank.HIGH, "low": Rank.LOW});
+final rankValues = EnumValues({"high": Rank.hIGH, "low": Rank.lOW});
 
 enum ConditionType {
-  CARVE,
-  INVESTIGATION,
-  PALICO,
-  PLUNDERBLADE,
-  REWARD,
-  SHINY,
-  TRACK,
-  WOUND
+  cARVE,
+  iNVESTIGATION,
+  pALICO,
+  pPLUNDERBLADE,
+  rEWARD,
+  sSHINY,
+  tRACK,
+  wOUND
 }
 
 final conditionTypeValues = EnumValues({
-  "carve": ConditionType.CARVE,
-  "investigation": ConditionType.INVESTIGATION,
-  "palico": ConditionType.PALICO,
-  "plunderblade": ConditionType.PLUNDERBLADE,
-  "reward": ConditionType.REWARD,
-  "shiny": ConditionType.SHINY,
-  "track": ConditionType.TRACK,
-  "wound": ConditionType.WOUND
+  "carve": ConditionType.cARVE,
+  "investigation": ConditionType.iNVESTIGATION,
+  "palico": ConditionType.pALICO,
+  "plunderblade": ConditionType.pPLUNDERBLADE,
+  "reward": ConditionType.rEWARD,
+  "shiny": ConditionType.sSHINY,
+  "track": ConditionType.tRACK,
+  "wound": ConditionType.wOUND
 });
 
-enum NowPlayingResponseType { LARGE, SMALL }
+enum NowPlayingResponseType { lARGE, sMALL }
 
 final nowPlayingResponseTypeValues = EnumValues({
-  "large": NowPlayingResponseType.LARGE,
-  "small": NowPlayingResponseType.SMALL
+  "large": NowPlayingResponseType.lARGE,
+  "small": NowPlayingResponseType.sMALL
 });
 
 class Weakness {

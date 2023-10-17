@@ -21,8 +21,6 @@ class CardSwiper extends StatelessWidget {
         itemHeight: size.height * 0.4,
         itemBuilder: (_, int index) {
           final dato = data[index];
-          // print(movie.posterPath);
-          // print(movie.fullPosterImg);
           return GestureDetector(
             onTap: () => Navigator.pushNamed(context, 'details', arguments: ''),
             child: ClipRRect(

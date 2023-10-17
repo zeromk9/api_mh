@@ -42,7 +42,7 @@ class MhSlider extends StatelessWidget {
 
 class _MhPoster extends StatelessWidget {
   final Ailment data;
-  const _MhPoster({super.key, required this.data});
+  const _MhPoster({required this.data});
 
   @override
   Widget build(BuildContext context) {
