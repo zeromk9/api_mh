@@ -31,7 +31,7 @@ class NowPlayingResponse {
   factory NowPlayingResponse.fromRawJson(String str) =>
       NowPlayingResponse.fromJson(json.decode(str));
 
-  String toRawJson() => json.encode(toJson());
+  //String toRawJson() => json.encode(toJson());
 
   factory NowPlayingResponse.fromJson(Map<String, dynamic> json) =>
       NowPlayingResponse(
@@ -54,7 +54,7 @@ class NowPlayingResponse {
             List<Reward>.from(json["rewards"].map((x) => Reward.fromJson(x))),
       );
 
-  Map<String, dynamic> toJson() => {
+/*   Map<String, dynamic> toJson() => {
         "id": id,
         "type": nowPlayingResponseTypeValues.reverse[type],
         "species": species,
@@ -67,5 +67,5 @@ class NowPlayingResponse {
         "resistances": List<dynamic>.from(resistances.map((x) => x.toJson())),
         "weaknesses": List<dynamic>.from(weaknesses.map((x) => x.toJson())),
         "rewards": List<dynamic>.from(rewards.map((x) => x.toJson())),
-      };
+      }; */
 }

@@ -20,7 +20,7 @@ class MhSlider extends StatelessWidget {
           const Padding(
             padding: EdgeInsets.symmetric(horizontal: 20),
             child: Text(
-              'Populares',
+              'Moustros',
               style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
@@ -59,7 +59,7 @@ class _MhPoster extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: FadeInImage(
                 placeholder: const AssetImage('assets/no-image.jpg'),
-                image: NetworkImage('assets/${data.id}.jpg'),
+                image: AssetImage('assets/${data.id}.jpg'),
                 width: 130,
                 height: 165,
               ),

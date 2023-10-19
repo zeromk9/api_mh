@@ -8,7 +8,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     final mhProvider = Provider.of<MhProvider>(context);
     return Scaffold(
       appBar: AppBar(
@@ -20,7 +19,7 @@ class HomeScreen extends StatelessWidget {
           )
         ],
         title: const Center(
-          child: Text('Peliculas en cine'),
+          child: Text('MONSTER HUNTER'),
         ),
       ),
       body: Column(

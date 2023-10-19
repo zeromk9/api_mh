@@ -27,7 +27,7 @@ class CardSwiper extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
               child: FadeInImage(
                 placeholder: const AssetImage('assets/no-image.jpg'),
-                image: NetworkImage('assets/${dato.id.toString()}.jpg'),
+                image: AssetImage('assets/${dato.id.toString()}.jpg'),
               ),
             ),
           );

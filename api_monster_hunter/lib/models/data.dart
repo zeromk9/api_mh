@@ -165,7 +165,7 @@ enum Element {
   dRAGON,
   fIRE,
   iCE,
-  pARALYSIS,
+  pPARALYSIS,
   pOISON,
   sLEEP,
   sTUN,
@@ -178,7 +178,7 @@ final elementValues = EnumValues({
   "dragon": Element.dRAGON,
   "fire": Element.fIRE,
   "ice": Element.iCE,
-  "paralysis": Element.pARALYSIS,
+  "paralysis": Element.pPARALYSIS,
   "poison": Element.pOISON,
   "sleep": Element.sLEEP,
   "stun": Element.sTUN,
@@ -314,9 +314,9 @@ enum ConditionType {
   cARVE,
   iNVESTIGATION,
   pALICO,
-  pPLUNDERBLADE,
+  pLUNDERBLADE,
   rEWARD,
-  sSHINY,
+  sHINY,
   tRACK,
   wOUND
 }
@@ -325,9 +325,9 @@ final conditionTypeValues = EnumValues({
   "carve": ConditionType.cARVE,
   "investigation": ConditionType.iNVESTIGATION,
   "palico": ConditionType.pALICO,
-  "plunderblade": ConditionType.pPLUNDERBLADE,
+  "plunderblade": ConditionType.pLUNDERBLADE,
   "reward": ConditionType.rEWARD,
-  "shiny": ConditionType.sSHINY,
+  "shiny": ConditionType.sHINY,
   "track": ConditionType.tRACK,
   "wound": ConditionType.wOUND
 });

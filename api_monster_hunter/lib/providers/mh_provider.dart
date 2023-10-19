@@ -8,34 +8,24 @@ class MhProvider extends ChangeNotifier {
   List<Ailment> onDisplayMh = [];
   List<Ailment> foughtMh = [];
 
+  var url = Uri.https('mhw-db.com', 'monsters');
+
   MhProvider() {
     getOnDisplayMh();
     getFoughtMh();
   }
 
   getOnDisplayMh() async {
-    try {
-      var url = Uri.https('mhw-db.com', '/monsters');
-      final response = await http.get(url);
-      final nowPlayingResponse = NowPlayingResponse.fromRawJson(response.body);
-      onDisplayMh = nowPlayingResponse.ailments;
-      notifyListeners();
-    } catch (error) {
-      // Manejar el error aquí (por ejemplo, mostrar un mensaje de error al usuario)
-      //print('Error en getOnDisplayMh: $error');
-    }
+    final response = await http.get(url);
+    final nowPlayingResponse = NowPlayingResponse.fromRawJson(response.body);
+    onDisplayMh = nowPlayingResponse.ailments;
+    notifyListeners();
   }
 
   getFoughtMh() async {
-    try {
-      var url = Uri.https('mhw-db.com', '/monsters');
-      final response = await http.get(url);
-      final popularResponse = FoughtMh.fromRawJson(response.body);
-      foughtMh = [...foughtMh, ...popularResponse.data];
-      notifyListeners();
-    } catch (error) {
-      // Manejar el error aquí (por ejemplo, mostrar un mensaje de error al usuario)
-      //print('Error en getFoughtMh: $error');
-    }
+    final response = await http.get(url);
+    final popularResponse = FoughtMh.fromRawJson(response.body);
+    foughtMh = [...foughtMh, ...popularResponse.data];
+    notifyListeners();
   }
 }

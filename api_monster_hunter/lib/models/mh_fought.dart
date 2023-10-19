@@ -17,8 +17,6 @@ class FoughtMh {
   factory FoughtMh.fromRawJson(String str) =>
       FoughtMh.fromJson(json.decode(str));
 
-  //String toRawJson() => json.encode(toJson());
-
   factory FoughtMh.fromJson(Map<String, dynamic> json) => FoughtMh(
         page: json["page"],
         data:
